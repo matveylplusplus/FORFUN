@@ -21,6 +21,8 @@
   #1 gives. 
  */
 
+enum bool {TRUE, FALSE};
+
 int main(void){
   printf("Your chars are %d bits = %d bytes!\n", __CHAR_BIT__,
 	 (__CHAR_BIT__/8));
@@ -30,6 +32,8 @@ int main(void){
 	 (sizeof(int)*__CHAR_BIT__),((sizeof(int)*__CHAR_BIT__)/8));
   printf("Your doubles are %ld bits = %ld bytes!\n",
 	 (sizeof(double)*__CHAR_BIT__),((sizeof(double)*__CHAR_BIT__)/8));
+  printf("Your bool enums are %ld bits = %ld bytes!\n",
+	 (sizeof(enum bool)*__CHAR_BIT__),((sizeof(enum bool)*__CHAR_BIT__)/8));
   
   
   return 0;
